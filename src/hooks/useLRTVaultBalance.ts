@@ -15,8 +15,12 @@ export function useLRTVaultBalance() {
 
   return { 
     amount: formattedAmount, 
-    isLoading, 
+    isLoading: !!address && isLoading,
     isError: !!error,
-    refetch
+    refetch: async () => {
+      if (!address) return Promise.resolve();
+      await refetch();
+      return Promise.resolve();
+    }
   };
 }

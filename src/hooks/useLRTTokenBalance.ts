@@ -15,7 +15,7 @@ export function useLRTTokenBalance() {
 
   return { 
     amount: formattedAmount, 
-    isLoading, 
+    isLoading: !!address && isLoading,
     isError: !!error
   };
 }

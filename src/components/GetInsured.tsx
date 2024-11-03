@@ -106,7 +106,7 @@ export default function GetInsured() {
         await new Promise(resolve => setTimeout(resolve, 2000));
         await refetchBalance();
 
-        toast.success(`Successfully redeemed ${amount} sUSDe!`, {
+        toast.success(`Successfully redeemed ${amount} esUSDe!`, {
           duration: 4000,
           position: 'bottom-right',
           style: {
