@@ -56,7 +56,11 @@ export default function Header({ setActiveTab }: HeaderProps) {
               <BookOpen className="w-4 h-4 mr-2" />
               Docs
             </a>
-            <ConnectButton />
+            <ConnectButton 
+              accountStatus='address'
+              chainStatus='icon'
+              showBalance={false}
+            />
           </div>
         </div>
       </div>
